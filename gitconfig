@@ -1,0 +1,20 @@
+[core]
+    editor = vim
+
+[user]
+    name = liangfeng
+    email = liang.feng98 AT gmail DOT com
+
+[alias]
+    serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    st = status
+    ci = commit
+    co = checkout
+    pul = pull
+    pus = push
+
+[color]
+	ui = auto
+
+[push]
+	default = simple
