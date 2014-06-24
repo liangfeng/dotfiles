@@ -27,3 +27,5 @@ else
     git clone https://github.com/seebi/tmux-colors-solarized.git
 fi
 
+# Nedd run cmd 'cat tmuxcolors-256.conf >> ~/.tmux.conf' in tmux-colors-solarized foloder.
+
