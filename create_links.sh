@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
 
+cd ~/.dotfiles
+
 DOT_FILES="bash_profile bashrc gitconfig tmux.conf"
 for f in $DOT_FILES; do
-    ln -sf ~/download/dotfiles/$f ~/.$f
+    ln -sf ~/.dotfiles/$f ~/.$f
 done
-
-cd ~/download/
 
 if [ -d dircolors-solarized ];
 then
@@ -16,7 +16,7 @@ else
     git clone https://github.com/seebi/dircolors-solarized.git
 fi
 
-ln -sf ~/download/dircolors-solarized/dircolors.ansi-dark ~/.dir_colors
+ln -sf ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark ~/.dir_colors
 
 if [ -d tmux-colors-solarized ];
 then
@@ -26,6 +26,3 @@ then
 else
     git clone https://github.com/seebi/tmux-colors-solarized.git
 fi
-
-# Nedd run cmd 'cat tmuxcolors-256.conf >> ~/.tmux.conf' in tmux-colors-solarized foloder.
-
