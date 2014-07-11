@@ -2,8 +2,8 @@
     editor = vim
 
 [user]
-    name = liangfeng
-    email = liang.feng98 AT gmail DOT com
+    name = Liang Feng
+    email = liang.feng98@gmail.com
 
 [alias]
     serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
