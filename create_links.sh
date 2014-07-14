@@ -9,13 +9,12 @@ done
 
 git submodule update --init
 
-cd dircolors-solarized
-git pull origin master
-cd ..
+SUBMODULES="dircolors-solarized tmux-colors-solarized"
+for module in $SUBMODULES; do
+    cd $module
+    git pull origin master
+    cd ..
+done
 
 ln -sf ~/.dotfiles/dircolors-solarized/dircolors.ansi-dark ~/.dir_colors
-
-cd tmux-colors-solarized
-git pull origin master
-cd ..
 
