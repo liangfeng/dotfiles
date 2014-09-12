@@ -5,7 +5,6 @@
 set -o vi
 ulimit -Sc unlimited
 
-export PATH=~/bin:$PATH
 export PS1='[\u]@[\w]\$'
 export TERM='screen-256color'
 export LC_ALL=en_US.utf-8
@@ -26,9 +25,7 @@ alias l.='ls -ld .* --color=auto'
 alias la='ls -ld .* --color=auto'
 alias ll='ls -l --color=auto'
 alias lh='ls -ldh --color=auto'
-alias vim='socksify vim'
-alias vi='socksify vim'
-alias vr='socksify vim -R'
+alias vi='vim'
+alias vr='vim -R'
 alias gdb='gdb -q'
-alias git='socksify git'
 alias tmux='tmux -2'
