@@ -9,7 +9,7 @@ for f in $DOT_FILES; do
 done
 
 git submodule foreach git pull origin master
-git submodule foreach git submodule update --init
+git submodule update --init
 
 ln -sf $dotfiles_src_dir/dircolors-solarized/dircolors.ansi-dark ~/.dir_colors
 
