@@ -18,4 +18,4 @@ git submodule foreach git submodule update --init
 git submodule foreach git pull origin master
 
 ln -sf $dotfiles_src_dir/dircolors-solarized/dircolors.ansi-dark ~/.dir_colors
-
+ln -sf $dotfiles_src_dir/tmux-colors-solarized/tmuxcolors-256.conf ~/.tmuxcolors-256.conf
