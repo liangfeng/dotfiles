@@ -17,6 +17,8 @@ complete -c man
 complete -c git
 complete -c svn
 
+eval `dircolors ~/.dir_colors`
+
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
