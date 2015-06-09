@@ -14,6 +14,9 @@ git submodule update --init
 # Update indirect-depended submodule, if any.
 git submodule foreach git submodule update --init
 
+# The submodules are "headless" after "git submodule update".
+git submodule foreach git checkout master
+
 # Update each checkouted submodules.
 git submodule foreach git pull origin master
 
