@@ -124,8 +124,8 @@ export EDITOR=vim
 export TERM=screen-256color
 
 export JAVA_HOME=~/tools/jdk1.8.0_45
-export ANDROID_HOME=$HOME/tools/android-sdk-linux
-export ANDROID_SDK_HOME=$HOME/tools/android-sdk-linux
+export ANDROID_HOME=~/tools/android-sdk-linux
+export ANDROID_SDK_HOME=~/tools/android-sdk-linux
 export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export USE_CCACHE=1
 
@@ -149,3 +149,22 @@ alias gdb='gdb -q'
 alias tmux='tmux -2'
 
 eval `dircolors ~/.dir_colors`
+
+function max_window()
+{
+    wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+}
+
+function restore_window()
+{
+    wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
+}
+
+function toogle_window()
+{
+    wmctrl -r :ACTIVE: -b toggle,maximized_vert,maximized_horz
+}
+
+alias max='max_window'
+alias res='restore_window'
+alias tog='toogle_window'
