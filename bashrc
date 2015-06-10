@@ -150,21 +150,23 @@ alias tmux='tmux -2'
 
 eval `dircolors ~/.dir_colors`
 
-function max_window()
-{
-    wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
-}
+if [ -n "$COLORTERM" ]; then
+    function max_window()
+    {
+        wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+    }
 
-function restore_window()
-{
-    wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
-}
+    function restore_window()
+    {
+        wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
+    }
 
-function toogle_window()
-{
-    wmctrl -r :ACTIVE: -b toggle,maximized_vert,maximized_horz
-}
+    function toogle_window()
+    {
+        wmctrl -r :ACTIVE: -b toggle,maximized_vert,maximized_horz
+    }
 
-alias max='max_window'
-alias res='restore_window'
-alias tog='toogle_window'
+    alias max='max_window'
+    alias res='restore_window'
+    alias tog='toogle_window'
+fi
