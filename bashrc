@@ -114,7 +114,6 @@ if ! shopt -oq posix; then
 fi
 
 # Add by liang.feng
-set -o vi
 ulimit -Sc unlimited
 
 export PS1='[\u]@[\w]\$ '
