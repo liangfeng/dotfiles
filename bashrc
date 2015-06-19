@@ -127,6 +127,9 @@ export JAVA_HOME=~/tools/jdk1.8.0_45
 export ANDROID_HOME=~/tools/android-sdk-linux
 export ANDROID_SDK_HOME=~/tools/android-sdk-linux
 export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/tools/slickedit-pro/bin
+export PATH=$PATH:~/tools/android-ndk-r10e
+export TMP=~/tmp
 export USE_CCACHE=1
 
 complete -c sudo
@@ -169,4 +172,7 @@ if [ -n "$COLORTERM" ]; then
     alias max='max_window'
     alias res='restore_window'
     alias tog='toogle_window'
+
+    # run terminal in max mode by default.
+    max_window
 fi

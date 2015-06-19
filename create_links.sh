@@ -8,11 +8,8 @@ for f in $DOT_FILES; do
     ln -sf $dotfiles_src_dir/$f ~/.$f
 done
 
-# Update direct-depended submodule.
-git submodule update --init
-
-# Update indirect-depended submodule, if any.
-git submodule foreach git submodule update --init
+# Update direct/indirect-depended submodule.
+git submodule update --init --recursive
 
 # The submodules are "headless" after "git submodule update".
 git submodule foreach git checkout master
