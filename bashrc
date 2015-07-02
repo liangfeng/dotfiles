@@ -129,6 +129,7 @@ export ANDROID_SDK_HOME=~/tools/android-sdk-linux
 export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/tools/slickedit-pro/bin
 export PATH=$PATH:~/tools/android-ndk-r10e
+export PATH=$PATH:~/tools/neovim/bin
 export TMP=~/tmp
 export USE_CCACHE=1
 
@@ -148,12 +149,13 @@ alias lh='ls -ldh --color=auto'
 alias grep='grep --color=auto'
 alias vi='vim'
 alias vr='vim -R'
+alias nv='nvim'
 alias gdb='gdb -q'
 alias tmux='tmux -2'
 
 eval `dircolors ~/.dir_colors`
 
-if [ -n "$COLORTERM" ]; then
+if [ "$COLORTERM" == 'gnome-terminal' ]; then
     function max_window()
     {
         wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
