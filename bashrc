@@ -127,10 +127,12 @@ export JAVA_HOME=~/tools/jdk1.8.0_45
 export ANDROID_HOME=~/tools/android-sdk-linux
 export ANDROID_SDK_HOME=~/tools/android-sdk-linux
 export PATH=$PATH:$JAVA_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:~/tools/bin
 export PATH=$PATH:~/tools/slickedit-pro/bin
 export PATH=$PATH:~/tools/android-ndk-r10e
 export PATH=$PATH:~/tools/neovim/bin
 export TMP=~/tmp
+export TMPDIR=~/tmp
 export USE_CCACHE=1
 
 complete -c sudo
