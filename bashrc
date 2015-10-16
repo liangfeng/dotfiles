@@ -132,6 +132,7 @@ export PATH=$PATH:~/tools/bin
 export PATH=$PATH:~/tools/slickedit-pro/bin
 export PATH=$PATH:~/tools/android-ndk-r10e
 export PATH=$PATH:~/tools/neovim/bin
+export PATH=$PATH:~/tools/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin
 export TMP=~/tmp
 export TMPDIR=~/tmp
 export USE_CCACHE=1
